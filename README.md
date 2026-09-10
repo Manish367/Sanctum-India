@@ -32,13 +32,39 @@ data across restarts than use the zero-setup in-memory mode.
 ## Content status
 
 - All 12 Jyotirlingas: full depth (story, history, architecture, festivals, travel).
-- 53 Shakti Peethas seeded — the traditional ~51-site list plus a couple of extras, grounded in
-  Wikipedia's sourced "Shakta pithas" compilation (body part / Devi / Bhairava names are cited,
-  not from memory). 10 major sites (Kamakhya, Kalighat, Tarapith, Jwalamukhi, Vimala/Puri,
-  Mahalakshmi/Kolhapur, Ambaji, Hinglaj, Vishalakshi/Varanasi, Kamakshi/Kanchipuram, Mangala
-  Gauri/Gaya) are in full narrative depth; the rest (`shaktiPeethasBatch2.ts`) are complete on
-  every schema field but more concise in prose, with sourcing notes on any site where the
-  underlying tradition itself varies across texts.
+- 53 Shakti Peethas seeded, grounded in Wikipedia's sourced "Shakta pithas" compilation (body
+  part / Devi / Bhairava names are cited, not from memory). 10 major sites (Kamakhya, Kalighat,
+  Tarapith, Jwalamukhi, Vimala/Puri, Mahalakshmi/Kolhapur, Ambaji, Hinglaj, Vishalakshi/Varanasi,
+  Kamakshi/Kanchipuram, Mangala Gauri/Gaya) are in full narrative depth; the rest
+  (`shaktiPeethasBatch2.ts`) are complete on every schema field but more concise in prose, with
+  sourcing notes on any site where the underlying tradition itself varies across texts.
+
+### Why 53 Shakti Peethas?
+
+The traditional count is **not fixed** — different texts disagree on how many pieces of Sati's
+body and ornaments fell as Vishnu's Sudarshana Chakra divided it:
+
+| Count | Source |
+| --- | --- |
+| **51** | Tantra Chudamani; the most-cited modern scholarly list (what this project's core list follows — each site's story chapter literally reads "one of the fifty-one sites"). |
+| 52 | Devi Bhagavata Purana and some *Pithanirnaya* lists. |
+| 42 / 64 / 108 | Other regional and Tantric traditions. |
+
+This project seeds the **51-site list**, plus **2 secondary sites** that are independently
+documented as Shakti Peethas but whose classification is thinner or contested — so
+`51 + 2 = 53`. The two extras carry their own badge (not "Shakti Peetha #N") and a `sourcesNote`
+explaining the caveat:
+
+- **Amarnath** ("Shiva Cave Shrine") — classified as the *Mahamaya Shakti Pitha* by some sources,
+  but unusually among the peethas, no text names a body part or ties the cave to Sati's story;
+  its living identity is entirely about Shiva.
+- **Vaishno Devi** ("Devi Shrine") — its own core legends (Rama's promise, the pursuit by
+  Bhairavnath) predate and outweigh its secondary, disputed Shakti Peetha reading (one tradition
+  says Sati's skull fell here, another her right arm, others place the right arm elsewhere).
+
+Note also that two sites appear in *both* collections by design — Srisailam (Mallikarjuna
+Jyotirlinga + Bhramaramba Shakti Peetha) and Deoghar (Vaidyanath Jyotirlinga + Vaidyanath Shakti
+Peetha) — since tradition holds them to be simultaneously both.
 - Temple photography: 62 of 65 temples have real, licensed Wikimedia Commons images with
   photographer/license credit shown on both the explorer cards and the detail-page gallery
   (`server/src/seed/data/images.ts`, generated via the Commons API). 3 sites
